@@ -7,16 +7,17 @@
   </head>		
   <body><center>
     <div>	  
-      <h1>Informe o tamanho da matriz:</h1>	
+      <h1>Informe:</h1>	
       <hr>
       <form action="sendmatriz.php" method="post">
         <div>
-          <label for="linhas">Número de Linhas: </label>
+        <!--linhas=restricoes, colunas=variaveis-->
+          <label for="linhas">Número de Restrições: </label> 
           <input type="number" name="linhas" required>
         </div>
         <br>
         <div >
-          <label for="colunas">Número de Colunas: </label>
+          <label for="colunas">Número de Variáveis: </label>
           <input type="number" name="colunas" required>
         </div>
         <br>

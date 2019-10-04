@@ -20,17 +20,24 @@
 					<thead>
 						<tr>
 						<th>#</th>
-							<?php for($j = 1; $j <= $qntcolunas; $j++ ) { ?>
+							<?php
+							if($qntlinhas == 0 || $qntcolunas == 0){
+								echo"<script>alert('Formato incorreto!');
+										window.location.replace('index.php');
+										</script>";
+							}
+							$qntcolunas++;
+							for($j = 1; $j <= $qntcolunas; $j++ ) { ?>
 								<th>
                                     <!--se a qntcolunas for menor, imprime X; senão imprime o resultado da função-->
-									<?php echo ($j != $qntcolunas)?"X<sub>$j<?/sub>":"resultado da função"?>
+									<?php echo ($j != $qntcolunas)?"X<sub>$j<?/sub>":"resultado da restrição"?>
 								</th>
 							<?php } ?>
 						</tr>
 					</thead>
 					<?php for($i = 1; $i <= $qntlinhas; $i++ ) { ?>
 						<tr>
-							<th scope="row"><?= "L<sub>$i</sub>" ?></th>
+							<th scope="row"><?= "Restrição<sub>$i</sub>" ?></th>
 
 							<?php for($j = 1; $j <= $qntcolunas; $j++ ) { ?>
 								<td class="<?php echo ($j == $qntcolunas)?'success':''?>">

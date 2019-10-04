@@ -58,7 +58,7 @@
                             //estrutura do print
                             for($j = 1; $j <= $this->colunas; $j++ ) { 
                                 echo '<th>';
-                                    echo ($j != $this->colunas)?"X<sub>$j<?/sub>":"b";
+                                    echo ($j != $this->colunas)?"X<sub>$j<?/sub>":"resultado da restrição";
                                 echo '</th>';
                             }
                         echo '</tr>';
@@ -66,7 +66,7 @@
                 //estrutura do print
                 for($i = 1; $i <= $this->linhas; $i++ ) {
                     echo '<tr>';
-                    echo "<th scope='row'>L<sub>".$i."</sub></th>";
+                    echo "<th scope='row'>Restrição<sub>".$i."</sub></th>";
                     for($j = 1; $j <= $this->colunas; $j++ ) {
                         echo "<td class=".(($j == $this->colunas)?'success':'').">";
                         //echo '<td>';

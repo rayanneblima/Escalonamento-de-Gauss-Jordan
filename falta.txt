@@ -1,0 +1,8 @@
+TODO:
+
+Trocar linhas por restrições (sempre >= 2)
+Trocar colunas por variáveis (sempre >= 2) + resultado de cada restrição 
+Campo para a função objetivo
+Informar se é função de minimização ou maximização
+Informar o sinal atribuido a cada restrição
+A partir disso, inserir as variáveis de folga ou excesso
